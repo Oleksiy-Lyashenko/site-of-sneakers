@@ -83,13 +83,9 @@ body {
   }
 }
 
-.content {
-  position: relative;
-}
-
 .cart {
   position: absolute;
-  top: -25px;
+  top: 75%;
   right: 0;
   width: 350px;
   height: 200px;
@@ -113,5 +109,160 @@ body {
     margin-top: 50px;
     color: $darkBlue;
     font-weight: 500;
+  }
+}
+
+.content {
+  padding: 70px 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+}
+
+.photo {
+  &__main {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__carousel {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__line {
+    box-sizing: border-box;
+    width: 20%;
+    border-radius: 10px;
+
+    &--active {
+      cursor: none;
+      opacity: 0.5;
+      border: 5px solid $darkOrange;
+      opacity: 0.5;
+
+      &:hover {
+        cursor: auto;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+
+.describe {
+  padding-top: 50px;
+
+  &__company {
+    color: $orange;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    display: block;
+    line-height: 55px;
+    font-size: 3.5em;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin: 0;
+    color: $mediumBlue;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__price-block {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+
+    margin-right: 15px;
+  }
+
+  &__price-prev {
+    display: block;
+    font-size: 20px;
+    color: $mediumBlue;
+    text-decoration: line-through;
+
+    margin-bottom: 50px;
+  }
+
+  &__sale {
+    display: block;
+    padding: 2px 7px;
+
+    font-size: 18px;
+    font-weight: 700;
+    background-color: $lightOrange;
+    color: $orange;
+
+    border-radius: 5px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    padding: 0 15px;
+    margin-right: 20px;
+
+    background-color: $lightBlue;
+    border-radius: 10px;
+  }
+
+  &__number {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__click {
+    cursor: pointer;
+  }
+
+  &__bye {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $white;
+    font-weight: 700;
+    background-color: $orange;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      box-shadow: 0 30px 20px 0px $mediumOrange;
+    }
+  }
+
+  &__cart {
+    width: 18px;
+    margin-right: 15px;
   }
 }

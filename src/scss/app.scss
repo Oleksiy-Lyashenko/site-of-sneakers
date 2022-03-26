@@ -13,6 +13,11 @@ body {
   height: 100vh;
   background-color: #fff;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 470px) {
+    padding: 0;
+  }
 }
 
 .header {
@@ -23,6 +28,10 @@ body {
   padding: 30px 0;
   padding-right: 30px;
   border-bottom: 1px solid $mediumBlue;
+
+  @media (max-width: 470px) {
+    padding: 20px;
+  }
 
   &__img {
     box-sizing: border-box;
@@ -37,6 +46,16 @@ body {
   }
 }
 
+.menu-icon {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
 .block {
   display: inherit;
   justify-content: inherit;
@@ -48,6 +67,10 @@ body {
   list-style: none;
   padding-bottom: 5px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &__link {
     text-decoration: none;
@@ -117,6 +140,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 100px;
+
+  @media (max-width: 470px) {
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .photo {
@@ -124,11 +156,20 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 30px;
+
+    @media (max-width: 470px) {
+      margin-bottom: 10px;
+      border-radius: 0;
+    }
   }
 
   &__carousel {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 470px) {
+      display: none;
+    }
   }
 
   &__line {
@@ -157,11 +198,19 @@ body {
 .describe {
   padding-top: 50px;
 
+  @media (max-width: 470px) {
+    padding: 0 20px 0;
+  }
+
   &__company {
     color: $orange;
     letter-spacing: 1.5px;
     font-size: 15px;
     text-transform: uppercase;
+
+    @media (max-width: 470px) {
+      font-size: 12px;
+    }
   }
 
   &__title {
@@ -170,6 +219,12 @@ body {
     font-size: 3.5em;
     font-weight: 500;
     margin-bottom: 40px;
+
+    @media (max-width: 470px) {
+      font-size: 2em;
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -178,6 +233,11 @@ body {
     letter-spacing: 1px;
     font-size: 18px;
     margin-bottom: 30px;
+
+    @media (max-width: 470px) {
+      font-size: 17px;
+      letter-spacing: normal;
+    }
   }
 
   &__price-block {
@@ -220,18 +280,29 @@ body {
 .button {
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  line-height: 60px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 
   &__count {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 130px;
+    width: 150px;
     padding: 0 15px;
     margin-right: 20px;
 
     background-color: $lightBlue;
     border-radius: 10px;
+
+    @media (max-width: 900px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
   }
 
   &__number {

@@ -1,0 +1,45 @@
+@import '../scss/_variables.scss';
+
+.menu {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+
+  &__content {
+    box-sizing: border-box;
+    width: 60%;
+    height: 100vh;
+    padding: 40px 20px;
+
+    background-color: #fff;
+  }
+
+  &__close {
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+
+    // &:last-of-type {
+    //   margin-bottom: 0;
+    // }
+  }
+}

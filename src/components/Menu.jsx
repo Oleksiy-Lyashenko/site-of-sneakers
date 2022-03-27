@@ -1,9 +1,12 @@
+import { useDispatch } from 'react-redux';
 import close from '../assets/images/icon-close.svg'
-import './Menu.scss'
+import { visibleMenu } from '../redux/actions/visible';
 
-const Menu = ({ setShowMenu}) => {
+const Menu = () => {
+  const dispatch = useDispatch();
+
   const closeMenu = () => {
-    setShowMenu(false);
+    dispatch(visibleMenu());
   }
 
   return (

@@ -1,0 +1,37 @@
+@import '../_variables.scss';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  padding-right: 30px;
+  border-bottom: 1px solid $mediumBlue;
+
+  @media (max-width: 470px) {
+    padding: 20px;
+  }
+
+  &__img {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+
+    &:hover {
+
+      border-radius: 50%;
+      border: 2px solid $orange;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+}
